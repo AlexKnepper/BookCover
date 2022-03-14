@@ -1,0 +1,399 @@
+@font-face
+{
+	font-family: futura;
+	src: url(../fonts/Futura-Condensed-Bold.ttf);
+}
+
+@font-face
+{
+	font-family: futuraLight;
+	src: url(../fonts/Schneidler-Mediaeval.ttf);
+}
+
+@font-face
+{
+		font-family: medieval;
+		src: url(../fonts/Futura-Condensed-Light-Regular.otf);
+}
+
+.base
+{
+  background-image: url("../images/background.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.author
+{
+  background-image: url("../images/author.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+	transition: all 20s ease-out;
+}
+
+.title1
+{
+  text-align: center;
+  top: 55px;
+  font-family: futura;
+  letter-spacing: 5px;
+  font-size: 2em;
+  position: relative;
+	transition: all 20s ease-out;
+}
+
+.title2
+{
+  text-align: center;
+  top: 60px;
+  font-family: futura;
+  letter-spacing: 5px;
+  font-size: 2em;
+  position: relative;
+	transition: all 20s ease-out;
+}
+
+.title3
+{
+  text-align: center;
+  top: 65px;
+  font-family: futura;
+  letter-spacing: 5px;
+  font-size: 2em;
+  position: relative;
+	transition: all 20s ease-out;
+}
+
+.subtitle
+{
+	opacity: 1;
+  text-align: center;
+  top: 70px;
+  font-family: futuraLight;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+  position: relative;
+	transition: all 20s ease-out;
+}
+
+.hand
+{
+  background-image: url("../images/hand.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	transition: all 20s ease-out;
+}
+
+.jacket
+{
+  background-image: url("../images/jacket.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	transition: all 20s ease-out;
+}
+
+.head
+{
+	background-image: url("../images/head.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	transition: all 20s ease-out;
+}
+
+.card
+{
+  width: 140px;
+  height: 210px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -49%);
+}
+
+.front
+{
+	background-image: url("../images/cardTexture.png");
+	position: absolute;
+	overflow: hidden;
+  border-radius: 20px;
+	width: 140px;
+	height: 210px;
+	backface-visibility: hidden;
+	transition: transform 1s ease;
+	transform: rotate3d(1, 1, 0, 0deg);
+}
+
+.mainSuit
+{
+	background-image: url("../images/suits/1.png");
+	width: 140px;
+  height: 210px;
+  position: absolute;
+	/**animation: switch 2s ease-in;**/
+}
+
+.topNum
+{
+	width: 140px;
+  height: 210px;
+  position: absolute;;
+}
+
+.botNum
+{
+	width: 140px;
+  height: 210px;
+  position: absolute;
+	transform: rotate(180deg);
+}
+
+.number
+{
+	position: relative;
+	top: 6px;
+	left: 7px;
+	font-family: Mediaeval;
+	font-size: 1.5em;
+	color: #CB601C;
+}
+
+.suit
+{
+	background-image: url("../images/smallSuits/1.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 9px;
+	left: 6px;
+	width: 18px;
+	height: 20px;
+	/**animation: switch 2s ease-in**/
+}
+
+/**
+@keyframes switch{
+  0%   {transform: rotateY(0deg);}
+  45%  {transform: rotateY(90deg); background-image: url("../images/diamond.png");}
+  50%  {transform: rotateY(90deg); background-image: url("../images/clubs.png");}
+	55%  {transform: rotateY(90deg);}
+  100% {transform: rotateY(0deg);}
+}
+**/
+
+.back
+{
+	background-image: url("../images/cardTexture.png");
+	position: absolute;
+	overflow: hidden;
+  border-radius: 20px;
+	position: absolute;
+	width: 140px;
+	height: 210px;
+	backface-visibility: hidden;
+	transition: transform 1s ease;
+	transform: rotate3d(1, 1, 0, 180deg);
+}
+
+.base:hover .front
+{
+		transform: rotate3d(1, 1, 0, -180deg);
+}
+
+.base:hover .back
+{
+		transform: rotate3d(1, 1, 0, 0deg);
+}
+
+.base:hover .shadow
+{
+	width: 600px;
+	height: 840px;
+}
+
+.base:hover .subtitle
+{
+	opacity: 0;
+}
+
+.base:hover .title1
+{
+transition-delay: 6s;
+	opacity: 0;
+}
+
+.base:hover .title2
+{
+transition-delay: 4s;
+	opacity: 0;
+}
+
+.base:hover .title3
+{
+	transition-delay: 2s;
+	opacity: 0;
+}
+
+.base:hover .hand
+{
+	transition-delay: 3s;
+	opacity: 0;
+}
+
+.base:hover .jacket, .base:hover .head
+{
+	transition-delay: 5s;
+	opacity: 0;
+}
+
+.base:hover .author
+{
+	transition-delay: 8s;
+	opacity: 0;
+}
+
+
+.shadow
+{
+	box-shadow: inset 0 0 100px 200px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	overflow: hidden;
+  border-radius: 100%;
+	width: 1400px;
+	height: 1800px;
+	transition: all 3s ease-out;
+}
+
+/**
+.staticCard
+{
+  background-image: url("../images/card.png");
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+**/
+
+.candle
+{
+	position: absolute;
+	top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width: 140px;
+	height: 210px;
+}
+
+.layers
+{
+  margin: 80px auto;
+  width: 60px;
+  height: 60px;
+  position:relative;
+	left: 10px;
+	top: -30px;
+  transform-origin: center bottom;
+  animation: flicker 3s infinite alternate ease-in;
+}
+
+.flame
+{
+  bottom:0;
+  position:absolute;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 100%;
+  transform: rotate(-45deg);
+}
+
+.yellow
+{
+  left: 8px;
+  width: 25px;
+  height: 25px;
+  background: orangered;
+  box-shadow: 0px 0px 5px 4px orangered;
+}
+
+.mauve
+{
+  left: 11px;
+  width: 18px;
+  height: 18px;
+  background: #e0b0ff;
+  box-shadow: 0px 0px 5px 4px #e0b0ff;
+}
+
+.black
+{
+  left: 15px;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  background: black;
+  box-shadow: 0px 0px 9px 1px blue;
+}
+
+@keyframes flicker{
+  0%   {transform: rotate(-1.5deg);}
+  20%  {transform: rotate(1.5deg);}
+  40%  {transform: rotate(-1.5deg);}
+  60%  {transform: rotate(1.5deg) scaleY(1.1);}
+  80%  {transform: rotate(-2.5deg) scaleY(0.88);}
+  100% {transform: rotate(1.5deg);}
+}
+
+.wick
+{
+	position: absolute;
+	top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	background: #23161a;
+	width: 6px;
+	height: 28px;
+	box-shadow:
+    inset 0 7px 8px -2px yellow,
+    inset 0 -5px 8px 2px black;
+}
+
+.stick
+{
+	position: absolute;
+	top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+	width: 40px;
+	height: 140px;
+	background: linear-gradient(#ff9224 0px, #ff9224 30px, #58523a 80px);
+	box-shadow:
+    inset 0 7px 12px -2px yellow,
+    inset 0 -5px 8px 2px black;
+}
